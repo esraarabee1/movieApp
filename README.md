@@ -4,8 +4,8 @@ A simple movie app built with React, TypeScript, and Bootstrap. It features a re
 
 ## 📸 Preview
 
-![home](/home.png)
-![details](/details.png)
+![home](public/home.png)
+![details](public/details.png)
 
 ## 🛠️ Technologies Used
 
