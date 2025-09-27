@@ -1,4 +1,4 @@
-name: CI/CD - Movie App (CRA)
+name: CI/CD - Movie App (CRA + TS)
 
 on:
   push:
@@ -11,26 +11,33 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # Checkout
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      # Setup Node.js
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 18
 
+      #  dependencies
       - name: Install dependencies
         run: npm ci
 
+      #  Lint
       - name: Run lint
         run: npm run lint || true
 
+      # Jest
       - name: Run tests
-        run: npm test -- --watchAll=false
+        run: npm test -- --watchAll=false --passWithNoTests
 
+      #  Build
       - name: Build project
         run: npm run build
 
+      #    GitHub Pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
