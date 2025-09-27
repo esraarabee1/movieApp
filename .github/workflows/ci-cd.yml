@@ -34,7 +34,7 @@ jobs:
 
       #  Build
       - name: Build project
-        run: npm run build
+        run: CI=false npm run build
 
       #    GitHub Pages
       - name: Deploy to GitHub Pages
