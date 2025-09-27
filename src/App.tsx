@@ -40,7 +40,7 @@ function App() {
     <div className="font color-body ">
       <NavBar search={searsh} />
       <Container>
-          <BrowserRouter>
+          <BrowserRouter basename="/movieApp">
             <Routes>
               <Route path="/" element={<MoviesList movies={movies} getPage={getPage} pageCount={pageCount}/>} />
               {/* باقي الصفحات */}
