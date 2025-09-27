@@ -55,7 +55,7 @@ const MovieDetails = () => {
 
   useEffect(() => {
     getMovieDetails();
-  }, [param.id]);
+  }, [param.id,getMovieDetails]);
 
   if (!movie) {
     return <h2 className="text-center my-5">جاري تحميل البيانات...</h2>;

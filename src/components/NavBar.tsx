@@ -1,7 +1,6 @@
 import React from "react";
 import { PiFilmSlateBold } from "react-icons/pi";
 import { Container, Col, Row } from "react-bootstrap";
-import { Link } from "react-router-dom";
 type navProp = {
   search: (word: string) => void,
 };
